@@ -1,30 +1,24 @@
 #include <iostream>
 using namespace std;
 
-// Realizar un programa donde el usuario ingrese 2 números, 1 como base y el otro como exponente. A través de una función recursiva se deberá obtener el resultado de la operación y al finalizar la cuenta se deberá mostrar el resultado final correspondiente.
+// Realizar un programa donde el usuario ingrese una palabra y a través de una función se le deberá devolver el número total de vocales que tenia la palabra. Mostrar por pantalla el resultado obtenido.
 
-int potencia(int base, int exponente){
-    if (exponente == 0){
-        // Caso base
-        exponente = 1;
+int contar_vocales(string str) {
+    int contador = 0;
+    for (int i = 0; i < str.size(); i++) {
+        str[i] = tolower(str[i]); // Convertir la letra a minúscula para simplificar la comparación
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u') {
+            contador++;
+        }
     }
-    else{
-        // Caso general
-        exponente = base * potencia(base, exponente - 1);
-    }
-    return exponente;
+    return contador;
 }
 
-int main(){
-    int base, exponente;
-    cout << "Ingrese la base: " << endl;
-    cin >> base;
-    cout << "Ingrese el exponente: " << endl;
-    cin >> exponente;
+int main() {
+    string cadena;
 
-    if (exponente < 0) {
-        exponente *= -1;
-    }
+    cout << "Ingresa una cadena: ";
+    cin >> cadena;
 
-    cout << base << " elevado a la potencia " << exponente << " es: " << potencia(base, exponente) << endl;
+    cout << "El número de vocales en la cadena es: " << contar_vocales(cadena) << endl;
 }

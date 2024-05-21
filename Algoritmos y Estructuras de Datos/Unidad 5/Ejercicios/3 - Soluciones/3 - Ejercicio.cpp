@@ -1,30 +1,29 @@
 #include <iostream>
 using namespace std;
 
-// Realizar un programa donde el usuario ingrese un número y a través de una función recursiva se deberá devolver y mostrar por pantalla, la posición correspondiente a la secuencia Fibonacci. Recuerden que esta sucesión, es una serie matemática infinita de números en la que cada término se calcula sumando los dos términos anteriores. (Los primeros términos de la secuencia son: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, etc.)
+// Realizar un programa donde el usuario ingrese una palabra y a través de una función se le deberá devolver la palabra invertida. Mostrar por pantalla el resultado obtenido.
 
-int fibonacci(int n){
-    if (n == 1){
-        // Caso base 1
-        n = 0;
+string invertir_cadena(string str) {
+    int largo = str.size();
+
+    for (int i = 0; i < largo / 2; i++){
+        char letra = str[i];
+        str[i] = str[largo - i - 1];
+        str[largo - i - 1] = letra;
     }
-    else if(n == 2){
-        // Caso base 2
-        n = 1;
-    }
-    else{
-        // Caso general
-        n = fibonacci(n - 1) + fibonacci(n - 2);
-    }
-    return n;
+
+    // for (int i = 0; i < largo / 2; i++) {
+    //     swap(str[i], str[largo - i - 1]);
+    // }
+
+    return str;
 }
 
-int main(){
-    int n = -1;
-    while (n < 0){
-        cout << "Ingrese un número mayor a 0: " << endl;
-        cin >> n;
-    }
+int main() {
+    string cadena;
 
-    cout << "La posicion " << n << " de la secuencia de Fibonacci es: " << fibonacci(n) << endl;
+    cout << "Ingresa una cadena: ";
+    cin >> cadena;
+
+    cout << "La cadena invertida es: " << invertir_cadena(cadena) << endl;
 }

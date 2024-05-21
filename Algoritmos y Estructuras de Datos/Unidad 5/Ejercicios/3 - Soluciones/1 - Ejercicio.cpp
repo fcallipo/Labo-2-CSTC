@@ -1,28 +1,19 @@
 #include <iostream>
 using namespace std;
 
-// Realizar un programa donde el usuario ingrese un número y a través de una función recursiva se deberá sumar todos los números desde el que ingreso, hasta el cero. Al finalizar la cuenta se deberá mostrar el resultado final correspondiente.
+// Realizar un programa donde el usuario ingrese el radio de un circulo, a través de una función se le deberá devolver el área. Mostrar por pantalla el resultado obtenido.
 
-int sumatoria(int n){
-    if (n == 0){
-        // Caso base
-        n = 0;
-    }
-    else{
-        // Caso general
-        n = n + sumatoria(n-1);
-    }
-    return n;
+const float PI = 3.14159;
+
+double area_circulo(float radio) {
+    return PI * radio * radio;
 }
 
-int main(){
-    int n;
-    cout << "Ingrese un número: " << endl;
-    cin >> n;
+int main() {
+    float radio;
 
-    if (n < 0) {
-        n *= -1;
-    }
+    cout << "Ingresa el radio del círculo: ";
+    cin >> radio;
 
-    cout << "La sumatoria de todos los números hasta " << n << " es: " << sumatoria(n) << endl;
+    cout << "El área del círculo es: " << area_circulo(radio) << endl;
 }
