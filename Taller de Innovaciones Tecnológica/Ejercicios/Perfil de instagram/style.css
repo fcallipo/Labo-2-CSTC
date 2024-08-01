@@ -1,0 +1,251 @@
+:root {
+    --colorFondo: #ffffff;
+    --colorPrincipal: #303030;
+    --colorSecundario: #a0a0a0;
+    --colorAzul: #13abe2;
+}
+
+body {
+    margin: 0;
+    background-color: var(--colorFondo);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 0.1px;
+    border-bottom: 1px solid var(--colorSecundario);
+}
+
+header img {
+    display: none;
+}
+
+.circulo {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 2px solid var(--colorSecundario);
+    cursor: pointer;
+}
+
+#partePC {
+    display: none;
+}
+
+#parteArriba {
+    width: 100%;
+    height: 60%;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#circuloFotoPerfil {
+    width: 100px;
+    height: 100px;
+    margin-right: 7%;
+}
+
+#circuloFotoPerfil img {
+    width: 100%;
+    height: auto;
+    border-radius: 100%;
+}
+
+.informacionBloque {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.informacionNumeros {
+    display: block;
+    margin: 0;
+}
+
+.informacionTexto {
+    font-size: 10px;
+    color: var(--colorSecundario);
+    margin: 0;
+}
+
+#seguir {
+    display: block;
+    width: 100%;
+    background-color: var(--colorAzul);
+    color: var(--colorFondo);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#parteAbajo {
+    display: block;
+    margin: 10px 10px 10px 10px;
+}
+
+.informacionDatos {
+    font-size: 12px;
+    color: var(--colorSecundario);
+    margin: 2px;
+}
+
+#nombre {
+    color: var(--colorPrincipal);
+}
+
+.contenedorCirculo {
+    display: inline-block;
+    margin: 5px 0 10px 10px;
+}
+
+#circuloFoto {
+    padding: 2px;
+}
+
+#circuloFoto img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.circuloTexto {
+    font-size: 12px;
+    color: var(--colorPrincipal);
+    margin: 5px;
+}
+
+#sectorFotos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 400px;
+}
+
+.contenedor {
+    width: 33.33%;
+    height: 133px;
+    image-rendering: auto;
+    cursor: pointer;
+}
+
+.contenedor img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 401px) {
+    #sectorInformacion,
+    #sectorCirculos,
+    #sectorFotos {
+        margin: 0 auto;
+        width: 400px;
+    }
+}
+
+@media (min-width: 641px) {
+    #sectorInformacion,
+    #sectorCirculos,
+    #sectorFotos {
+        width: 600px;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header img {
+        display: block;
+        width: 110px;
+        height: auto;
+        margin-left: 10px;
+    }
+
+    header p {
+        display: none;
+    }
+
+    #parteArriba {
+        justify-content: space-around;
+    }
+
+    #parteMobile {
+        display: none;
+    }
+
+    #parteAbajo {
+        display: none;
+    }
+
+    #partePC {
+        display: block;
+    }
+
+    #parteArribaPC {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #nombrePC {
+        font-size: 15px;
+        color: var(--colorPrincipal);
+        margin-right: 20px;
+    }
+
+    #seguirPC {
+        background-color: var(--colorAzul);
+        color: var(--colorFondo);
+        padding: 5px;
+        border-radius: 5px;
+        width: 100px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #informacionNumerosPC {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .informacionPC {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .numeroPC {
+        margin: 0 5px;
+    }
+
+    .textoPC {
+        font-size: 13px;
+        color: var(--colorSecundario);
+    }
+
+    .informacionDatosPC {
+        font-size: 13px;
+        color: var(--colorSecundario);
+        margin: 2px;
+    }
+
+    #nombreUsuarioPC {
+        color: var(--colorPrincipal);
+    }
+
+    #sectorFotos {
+        width: 600px;
+    }
+
+    .contenedor {
+        width: 31.6%;
+        height: 170px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+}
