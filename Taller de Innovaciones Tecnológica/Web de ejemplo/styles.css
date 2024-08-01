@@ -1,0 +1,56 @@
+:root {
+    --colorRojo: red;
+    --colorAzul: blue;
+    --colorVerde: green;
+    --colorNegro: black;
+    --colorBlanco: white;
+    font-family: dyuthi;
+}
+
+body {
+    color: var(--colorRojo);
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+    margin: 20px;
+}
+
+p {
+    border: 2px solid var(--colorRojo);
+}
+
+a {
+    border: 2px solid var(--colorAzul);
+    color: var(--colorNegro);
+    text-decoration: none;
+}
+
+#contenedor {
+    display: flex;
+    height: 100vh;
+}
+
+.card {
+    color: var(--colorNegro);
+    border: 2px solid var(--colorNegro);
+    background-color: var(--colorBlanco);
+    box-shadow: 0px 0px 15px var(--colorNegro);
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 600px) {
+    body{
+        color: var(--colorAzul);
+    }
+} 
+/* Estas diciendo que el color del texto va a ser azul desde los 600px */
+
+@media (max-width: 500px){
+    body{
+        color: var(--colorVerde)
+    }
+} 
+/* Estas diciendo que el color del texto va a ser verde hasta que pase los 500px */
